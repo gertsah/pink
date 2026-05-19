@@ -8,11 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/main.css">
-
-<!-- preload hero video — браузер начнёт качать его параллельно с HTML/CSS -->
-<link rel="preload" as="video" href="hero1.mp4" type="video/mp4">
-<link rel="preload" as="video" href="hero2.mp4" type="video/mp4">
+<link rel="stylesheet" href="styles/main.css?v=3">
 </head>
 <body>
 
@@ -60,8 +56,8 @@
 <!-- SCROLL STACK: hero → hero-2 → editorial-1, всё наезжает слоями -->
 <div class="scroll-stack">
   <section class="hero hero--sticky">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto" fetchpriority="high" disableremoteplayback>
-      <source src="hero1.mp4" type="video/mp4">
+    <video class="hero__video" autoplay muted loop playsinline preload="auto">
+      <source src="hero1.mp4?v=3" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <button class="hero__unmute" aria-label="Звук" data-muted="true">
@@ -72,7 +68,7 @@
 
   <section class="hero hero--second">
     <video class="hero__video" autoplay muted loop playsinline preload="auto">
-      <source src="hero2.mp4" type="video/mp4">
+      <source src="hero2.mp4?v=3" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -453,6 +449,6 @@
   </div>
 </footer>
 
-<script src="scripts/main.js"></script>
+<script src="scripts/main.js?v=3"></script>
 </body>
 </html>
