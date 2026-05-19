@@ -903,22 +903,58 @@ p  { margin: 0 0 1em 0; }
   :root { --pad-x: 20px; --header-h: 56px; --section-gap: 72px; }
 
   /* HEADER */
-  .burger { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; }
-  .burger svg { width: 22px; height: 22px; }
+  .burger {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px;
+    position: relative;
+    z-index: 201;
+  }
+  .burger svg { width: 22px; height: 22px; transition: opacity 200ms var(--ease), transform 200ms var(--ease); }
+  .burger .icon-close { display: none; }
+  .burger.is-open .icon-burger { display: none; }
+  .burger.is-open .icon-close { display: block; }
   .header-left .header-link, .header-right .header-link { display: none; }
   .header-top { padding: 10px var(--pad-x) 8px; grid-template-columns: auto 1fr auto; }
   .header-left { gap: 12px; }
   .header-right { gap: 8px; }
   .icon-btn { width: 28px; height: 28px; }
   .icon-btn svg { width: 16px; height: 16px; }
-  .main-nav { display: none; }
-  .main-nav.is-open {
-    display: block; position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
-    background: #fff; padding: 32px 20px;
-    z-index: 99;
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    z-index: 200;
     overflow-y: auto;
+    padding: calc(var(--header-h) + 24px) 28px 32px;
+    border-top: 0;
+    color: var(--ink);
   }
-  .main-nav.is-open ul { flex-direction: column; gap: 24px; padding: 0; align-items: flex-start; font-size: 16px; }
+  .main-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    animation: navIn 280ms var(--ease) both;
+  }
+  .main-nav.is-open ul {
+    flex-direction: column;
+    gap: 22px;
+    padding: 0;
+    align-items: flex-start;
+    font-size: 18px;
+    letter-spacing: .12em;
+    font-family: var(--serif);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .main-nav.is-open ul a { color: var(--ink); padding: 4px 0; }
+  .main-nav.is-open ul a::after { background: var(--pink-deep); }
+  /* Когда меню открыто — header виден на белом, ссылки тёмные, корзина и т.д. */
+  body.menu-open .site-header { color: var(--ink); background: #fff; border-bottom-color: var(--line); }
+  body.menu-open { overflow: hidden; touch-action: none; }
+  @keyframes navIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
   /* HERO на мобильном — 75% высоты экрана, чтобы видео фит был
      "правильным": заполнение по ширине без агрессивного кропа боков */

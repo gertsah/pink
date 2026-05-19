@@ -18,8 +18,23 @@
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.main-nav');
   if (burger && nav) {
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('is-open');
+    const setOpen = (open) => {
+      nav.classList.toggle('is-open', open);
+      burger.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    burger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('is-open'));
+    });
+    // Закрываем при клике на любую ссылку в меню
+    nav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => setOpen(false));
+    });
+    // Закрываем по Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) setOpen(false);
     });
   }
 
