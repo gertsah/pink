@@ -922,8 +922,17 @@ p  { margin: 0 0 1em 0; }
     height: 100svh;
     min-height: 0;
   }
-  .hero__video {
+  /* На мобильном видео показываются ЦЕЛИКОМ (без кропа боков), на тёмном фоне.
+     Это даёт ощущение "шире" — модель и сцена видны полностью. */
+  .hero__video,
+  .editorial__media {
+    object-fit: contain;
     object-position: center center;
+    background: #0a0a0a;
+  }
+  /* Editorial-фото (не видео) оставляем cover, иначе будут белые поля */
+  .editorial img.editorial__media {
+    object-fit: cover;
   }
   .hero__content { bottom: 12vh; padding: 0 24px; }
   .hero__title { font-size: clamp(36px, 11vw, 56px); letter-spacing: 0; }
