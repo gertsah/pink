@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+node_modules/
+*.b64
+.agents/
+.claude/
+logo_transparent.png
+7aa7d6fd-b7ad-4d38-bf2f-ff0c996b4d71.png

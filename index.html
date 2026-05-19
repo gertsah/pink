@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ПИНК — Весна-Лето 2026</title>
+<meta name="description" content="ПИНК — премиальная женская одежда, сумки, обувь и бижутерия. Коллекция Весна-Лето 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="header-left">
+      <button class="burger" aria-label="Меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+      <a class="header-link" href="pages/photography.html">Фотогалерея</a>
+      <a class="header-link" href="pages/films.html">Видео</a>
+      <a class="header-link" href="pages/looks.html">Луки</a>
+    </div>
+    <a class="logo" href="index.html" aria-label="ПИНК"><img src="assets/logo.png" alt="ПИНК"></a>
+    <div class="header-right">
+      <a class="header-link" href="#">Поиск</a>
+      <a class="header-link" href="#">RU / ₽</a>
+      <a class="icon-btn" href="#" aria-label="Аккаунт">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="Избранное">
+        <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="Корзина">
+        <svg viewBox="0 0 24 24"><path d="M6 7h12l-1.5 12a2 2 0 01-2 1.8H9.5a2 2 0 01-2-1.8L6 7zM9 7V5a3 3 0 016 0v2"/></svg>
+        <span class="cart-count">2</span>
+      </a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="pages/clothing.html">Женское</a></li>
+      <li><a href="pages/clothing.html">Одежда</a></li>
+      <li><a href="pages/bags.html">Сумки</a></li>
+      <li><a href="pages/shoes.html">Обувь</a></li>
+      <li><a href="pages/jewelry.html">Бижутерия</a></li>
+      <li><a href="pages/looks.html">Луки</a></li>
+      <li><a href="#">Коллекции</a></li>
+      <li><a href="#">Истории</a></li>
+      <li><a href="#">Бутики</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- SCROLL STACK: hero → hero-2 → editorial-1, всё наезжает слоями -->
+<div class="scroll-stack">
+  <section class="hero hero--sticky">
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/studio-products/fashion-04.png">
+      <source src="hero1.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <button class="hero__unmute" aria-label="Звук" data-muted="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 9v6h4l5 4V5L8 9H4zM17 8l4 4m0-4l-4 4"/></svg>
+    </button>
+    <div class="scroll-hint">Прокрутите</div>
+  </section>
+
+  <section class="hero hero--second">
+    <video class="hero__video" autoplay muted loop playsinline>
+      <source src="hero2.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__eyebrow">Капсула «Дюна»</div>
+      <h1 class="hero__title">Песок и ветер</h1>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="pages/looks.html">Смотреть лукбук</a>
+        <a class="btn btn--light" href="pages/films.html">Фильм коллекции</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="editorial editorial--crowd">
+    <img class="editorial__media" src="editorial-crowd.png" alt="ПИНК — городская кампания">
+    <div class="editorial__caption">
+      <strong>В сердце города</strong>
+      Кампания Весна-Лето 2026
+    </div>
+    <a class="editorial__cta btn btn--light" href="pages/films.html">Смотреть фильм</a>
+  </section>
+</div>
+
+<!-- NEW IN -->
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="section__eyebrow">Новинки</div>
+      <h2 class="section__title">Только что в бутике</h2>
+    </div>
+    <div class="product-grid product-grid--scroll reveal">
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="hf_20260516_002600_86297cfa-92fb-4b31-a1cd-1de28cd9ab09.png" alt="Сумка Камелия пудровая">
+          <img class="product-card__img product-card__img--secondary" src="photo_2026-05-16_17-27-43.jpg" alt="Модель с сумкой Камелия">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+          <span class="product-card__tag">Новинка</span>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Камелия</div>
+            <div class="product-card__category">Стёганая сумка</div>
+          </div>
+          <div class="product-card__price">2 990 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="assets/studio-products/fashion-04.png" alt="Сумка Лилия">
+          <img class="product-card__img product-card__img--secondary" src="hf_20260515_231732_18d64aaa-b3cb-4d4d-aa0a-7999cb774899.png" alt="Сумка Лилия в окружении цветов">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Лилия</div>
+            <div class="product-card__category">Сумка top-handle</div>
+          </div>
+          <div class="product-card__price">3 290 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="assets/studio-products/fashion-17.png" alt="Жакет Небо">
+          <img class="product-card__img product-card__img--secondary" src="assets/studio-products/fashion-16.png" alt="Жакет с брюками">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+          <span class="product-card__tag">Новинка</span>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Жакет «Небо»</div>
+            <div class="product-card__category">Лён · приталенный</div>
+          </div>
+          <div class="product-card__price">5 290 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="assets/studio-products/fashion-07.png" alt="Туфли Слинг шоколад">
+          <img class="product-card__img product-card__img--secondary" src="assets/studio-products/fashion-10.png" alt="Туфли Слинг сверху">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Слинг 55</div>
+            <div class="product-card__category">Туфли на каблуке</div>
+          </div>
+          <div class="product-card__price">4 290 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="assets/studio-products/fashion-03.png" alt="Жакет Кора">
+          <img class="product-card__img product-card__img--secondary" src="photo_2026-05-16_17-27-02.jpg" alt="Жакет на модели">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Кора</div>
+            <div class="product-card__category">Жакет из кожи</div>
+          </div>
+          <div class="product-card__price">6 990 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="hf_20260516_001050_0a2de931-f483-482c-8c76-bf9c14662c18.png" alt="Клатч Цитрус">
+          <img class="product-card__img product-card__img--secondary" src="look-moloko.png" alt="Клатч на модели">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Цитрус</div>
+            <div class="product-card__category">Клатч лаковый</div>
+          </div>
+          <div class="product-card__price">2 590 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="assets/studio-products/fashion-06.png" alt="Блуза Облако">
+          <img class="product-card__img product-card__img--secondary" src="assets/studio-products/fashion-05.png" alt="Блуза с брюками">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Облако</div>
+            <div class="product-card__category">Блуза с поясом</div>
+          </div>
+          <div class="product-card__price">2 190 ₽</div>
+        </div>
+      </a>
+      <a class="product-card" href="pages/product.html">
+        <div class="product-card__images">
+          <img class="product-card__img product-card__img--primary" src="hf_20260516_005115_46cb045d-affb-4da7-b09f-e35034933a19.png" alt="Сумка Жемчуг">
+          <img class="product-card__img product-card__img--secondary" src="hf_20260515_231732_18d64aaa-b3cb-4d4d-aa0a-7999cb774899.png" alt="Сумка Жемчуг — деталь">
+          <button class="product-card__fav" aria-label="В избранное"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.7A4 4 0 0119 10c0 5.5-7 10-7 10z"/></svg></button>
+        </div>
+        <div class="product-card__info">
+          <div>
+            <div class="product-card__name">Жемчуг</div>
+            <div class="product-card__category">Мини-сумка на цепочке</div>
+          </div>
+          <div class="product-card__price">3 190 ₽</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO BLOCK (sticky pin) -->
+<section class="editorial scroll-pin" style="background:#000">
+  <video class="editorial__media" autoplay muted loop playsinline>
+    <source src="film-dune.mp4" type="video/mp4">
+  </video>
+  <div class="editorial__caption">
+    <strong>Капсула «Дюна»</strong>
+    Фильм коллекции · 1:24
+  </div>
+  <a class="editorial__cta btn btn--light" href="pages/films.html">Смотреть фильм</a>
+</section>
+
+<!-- LOOKS 2x2 -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <div class="section__eyebrow">Лукбук</div>
+      <h2 class="section__title">Луки сезона</h2>
+    </div>
+    <div class="looks-2x2 reveal">
+      <a href="pages/looks.html">
+        <img src="photo_2026-05-16_17-27-02.jpg" alt="Лук Дюна">
+        <span class="meta">Look 01</span>
+        <span class="cap">Дюна</span>
+      </a>
+      <a href="pages/looks.html">
+        <img src="photo_2026-05-16_17-27-43.jpg" alt="Лук Камелия">
+        <span class="meta">Look 02</span>
+        <span class="cap">Камелия</span>
+      </a>
+      <a href="pages/looks.html">
+        <img src="photo_2026-05-16_17-33-13.jpg" alt="Лук Графит">
+        <span class="meta">Look 03</span>
+        <span class="cap">Графит</span>
+      </a>
+      <a href="pages/looks.html">
+        <img src="photo_2026-05-16_17-30-58.jpg" alt="Лук Ботаника">
+        <span class="meta">Look 04</span>
+        <span class="cap">Ботаника</span>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a class="link-underline" href="pages/looks.html">Все луки сезона</a>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL 2 (sticky pin) -->
+<section class="editorial scroll-pin">
+  <img class="editorial__media" src="hf_20260516_002600_86297cfa-92fb-4b31-a1cd-1de28cd9ab09.png" alt="Камелия — стёганая сумка">
+  <div class="editorial__caption">
+    <strong>Камелия</strong>
+    Знаковая стёганая сумка · пудровый телёнок
+  </div>
+  <a class="editorial__cta btn btn--light" href="pages/bags.html">Смотреть сумки</a>
+</section>
+
+<!-- CATEGORY HUBS -->
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <h2 class="section__title">Открыть бутик</h2>
+    </div>
+    <div class="hub-grid reveal">
+      <a class="hub-card" href="pages/clothing.html">
+        <img class="hub-card__img" src="look-chocolate.png" alt="Одежда">
+        <span class="hub-card__title">Одежда</span>
+      </a>
+      <a class="hub-card" href="pages/bags.html">
+        <img class="hub-card__img" src="hf_20260515_231732_18d64aaa-b3cb-4d4d-aa0a-7999cb774899.png" alt="Сумки">
+        <span class="hub-card__title">Сумки</span>
+      </a>
+      <a class="hub-card" href="pages/shoes.html">
+        <img class="hub-card__img" src="assets/studio-products/fashion-07.png" alt="Обувь">
+        <span class="hub-card__title">Обувь</span>
+      </a>
+      <a class="hub-card" href="pages/jewelry.html">
+        <img class="hub-card__img" src="photo_2026-05-16_17-27-43.jpg" alt="Бижутерия">
+        <span class="hub-card__title">Бижутерия</span>
+      </a>
+      <a class="hub-card" href="pages/looks.html">
+        <img class="hub-card__img" src="photo_2026-05-16_17-33-13.jpg" alt="Луки">
+        <span class="hub-card__title">Луки</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="section__eyebrow">Журнал</div>
+      <h2 class="section__title">Истории сезона</h2>
+    </div>
+    <div class="stories reveal">
+      <a class="story-card" href="#">
+        <div class="story-card__media"><img src="look-moloko.png" alt=""></div>
+        <div class="story-card__cat">За кадром</div>
+        <div class="story-card__title">Атмосфера съёмки кампании «Дюна»</div>
+        <div class="story-card__date">12 апреля 2026</div>
+      </a>
+      <a class="story-card" href="#">
+        <div class="story-card__media"><img src="look-chocolate.png" alt=""></div>
+        <div class="story-card__cat">Мастерство</div>
+        <div class="story-card__title">Восемь часов работы над одной Лилией</div>
+        <div class="story-card__date">28 марта 2026</div>
+      </a>
+      <a class="story-card" href="#">
+        <div class="story-card__media"><img src="photo_2026-05-16_17-33-13.jpg" alt=""></div>
+        <div class="story-card__cat">Архитектура стиля</div>
+        <div class="story-card__title">Чёрные сапоги: новая основа гардероба</div>
+        <div class="story-card__date">02 марта 2026</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STORE LOCATOR: Яндекс.Карты + график (данные из 2ГИС) -->
+<section class="store-locator">
+  <div class="container">
+    <div class="section__head section__head--center reveal" style="margin-bottom:48px;">
+      <div class="section__eyebrow">Бутик</div>
+      <h2 class="section__title">Новороссийск · улица Советов</h2>
+    </div>
+    <div class="grid reveal">
+      <div class="store-map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=37.774618%2C44.718713&amp;z=16&amp;pt=37.774618%2C44.718713%2Cpm2rdl"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allow="geolocation"
+          title="ПИНК · улица Советов, 37, Новороссийск"></iframe>
+      </div>
+      <aside class="store-info">
+        <div class="store-status">Сейчас открыто</div>
+        <h3>ПИНК · Новороссийск</h3>
+        <div class="addr">
+          улица Советов, 37, 1 этаж<br>
+          Центральный район, Новороссийск, 353900
+        </div>
+
+        <div class="hours">
+          <h4>Часы работы</h4>
+          <dl>
+            <dt>Понедельник</dt><dd>10:00 — 20:00</dd>
+            <dt class="today">Вторник · сегодня</dt><dd class="today">10:00 — 20:00</dd>
+            <dt>Среда</dt><dd>10:00 — 20:00</dd>
+            <dt>Четверг</dt><dd>10:00 — 20:00</dd>
+            <dt>Пятница</dt><dd>10:00 — 20:00</dd>
+            <dt>Суббота</dt><dd>10:00 — 20:00</dd>
+            <dt>Воскресенье</dt><dd>10:00 — 20:00</dd>
+          </dl>
+        </div>
+
+        <div class="store-actions">
+          <a class="btn btn--solid btn--block" href="https://yandex.ru/maps/?rtext=~44.718713%2C37.774618&amp;rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+          <a class="btn btn--block" href="#">Программа лояльности</a>
+        </div>
+
+        <div class="store-contacts">
+          <a href="tel:+79528525355">+7 952 852 53 55</a>
+          <a href="https://wa.me/79528525355" target="_blank" rel="noopener">WhatsApp · Telegram</a>
+          <a href="https://2gis.ru/novorossiysk/firm/70000001075192342" target="_blank" rel="noopener">2ГИС · 5,0 (23 отзыва)</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Оставайтесь в курсе</h2>
+  <p>Новые коллекции, приглашения в бутики, истории мастеров — раз в неделю в вашей почте.</p>
+  <form>
+    <input type="email" placeholder="Электронная почта" required>
+    <button type="submit">Подписаться</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-col">
+      <h5>Клиентский сервис</h5>
+      <ul>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Возврат и обмен</a></li>
+        <li><a href="#">Гарантия и ремонт</a></li>
+        <li><a href="#">Таблицы размеров</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Бренд ПИНК</h5>
+      <ul>
+        <li><a href="#">О бренде</a></li>
+        <li><a href="#">Мастерство</a></li>
+        <li><a href="#">Устойчивое развитие</a></li>
+        <li><a href="#">Бутики</a></li>
+        <li><a href="#">Карьера</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Юридическая информация</h5>
+      <ul>
+        <li><a href="#">Пользовательское соглашение</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Реквизиты компании</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Подписаться</h5>
+      <p style="font-size:13px; color:var(--ink-soft);">Новые поступления и приватные превью.</p>
+      <form class="newsletter" style="padding:0; background:transparent; text-align:left;">
+        <input type="email" placeholder="Электронная почта" required>
+        <button type="submit">→</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 ПИНК. Все права защищены.</div>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Pinterest</a>
+      <a href="#">YouTube</a>
+    </div>
+    <div>Россия · ₽</div>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
