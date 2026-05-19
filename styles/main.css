@@ -303,7 +303,11 @@ p  { margin: 0 0 1em 0; }
   .scroll-stack > .hero,
   .scroll-stack > .editorial,
   .hero-stack > .hero,
-  .hero-stack > .editorial { min-height: 0; }
+  .hero-stack > .editorial {
+    min-height: 0;
+    height: 75vh;
+    height: 75svh;
+  }
 }
 .scroll-stack > *:nth-child(1),
 .hero-stack > *:nth-child(1) { z-index: 1; }
@@ -916,23 +920,26 @@ p  { margin: 0 0 1em 0; }
   }
   .main-nav.is-open ul { flex-direction: column; gap: 24px; padding: 0; align-items: flex-start; font-size: 16px; }
 
-  /* HERO — fit to actual viewport, не выходит за пределы экрана */
+  /* HERO на мобильном — 75% высоты экрана, чтобы видео фит был
+     "правильным": заполнение по ширине без агрессивного кропа боков */
   .hero {
-    height: 100vh;
-    height: 100svh;
+    height: 75vh;
+    height: 75svh;
     min-height: 0;
   }
-  /* На мобильном видео показываются ЦЕЛИКОМ (без кропа боков), на тёмном фоне.
-     Это даёт ощущение "шире" — модель и сцена видны полностью. */
-  .hero__video,
-  .editorial__media {
-    object-fit: contain;
-    object-position: center center;
-    background: #0a0a0a;
-  }
-  /* Editorial-фото (не видео) оставляем cover, иначе будут белые поля */
-  .editorial img.editorial__media {
+  .hero__video {
     object-fit: cover;
+    object-position: center center;
+  }
+  /* Editorial-блоки тоже 75svh, чтобы видео в них не растягивалось */
+  .editorial {
+    height: 75vh;
+    height: 75svh;
+    min-height: 0;
+  }
+  .editorial__media {
+    object-fit: cover;
+    object-position: center center;
   }
   .hero__content { bottom: 12vh; padding: 0 24px; }
   .hero__title { font-size: clamp(36px, 11vw, 56px); letter-spacing: 0; }
