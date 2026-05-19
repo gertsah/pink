@@ -110,6 +110,39 @@
     items.forEach((i) => i.addEventListener('click', () => activate(i.dataset.id)));
   });
 
+  // -------- Lazy-load videos --------
+  // Загружаем видео только когда оно близко ко viewport — экономия трафика.
+  if ('IntersectionObserver' in window) {
+    const vIo = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const v = entry.target;
+        const src = v.dataset.src;
+        if (src && !v.querySelector('source')) {
+          const s = document.createElement('source');
+          s.src = src;
+          s.type = 'video/mp4';
+          v.appendChild(s);
+          v.load();
+          v.play().catch(() => {});
+        } else {
+          v.play().catch(() => {});
+        }
+        vIo.unobserve(v);
+      });
+    }, { rootMargin: '300px 0px', threshold: 0.01 });
+    document.querySelectorAll('video.lazy-video').forEach((v) => vIo.observe(v));
+  } else {
+    // fallback — просто загружаем сразу
+    document.querySelectorAll('video.lazy-video').forEach((v) => {
+      if (v.dataset.src && !v.querySelector('source')) {
+        const s = document.createElement('source');
+        s.src = v.dataset.src; s.type = 'video/mp4';
+        v.appendChild(s); v.load();
+      }
+    });
+  }
+
   // -------- Reveal on scroll --------
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
